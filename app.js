@@ -37,7 +37,12 @@ fs.mkdir('./doc1',(err =>{
 
 /////////////////////////////// remove directory ////////////////////////////////////////
 fs.rmSync('./doc1',{recursive: true,force: true},() =>{
-    console.log("Removed!!")
 });
 
+
+/////////////////////////////// remove file ////////////////////////////////////////
+//async
+fs.unlink('.doc2.txt',() =>{
+    console.log("Removed the file!!")
+});
 
