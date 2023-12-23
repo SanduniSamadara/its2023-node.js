@@ -25,3 +25,9 @@ console.log("Called2!!");
 fs.writeFile('doc.txt','Welcome to NodeJS', () =>{
     console.log("Updated!!")
 })
+
+
+/////////////////////////////// create directory ////////////////////////////////////////
+fs.mkdir('./doc',(err =>{
+    console.log("Created!!");
+}))
