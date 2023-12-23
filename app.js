@@ -7,3 +7,8 @@ fs.readFile('doc.txt',(err, data) =>{
     console.log(data.toString());
 });
 console.log("Called!!"); // print first because read file might take some time . Asynchronous
+
+const read = fs.readFileSync('doc.txt');
+console.log("SY: ",read.toString());
+
+console.log("Called2!!");
