@@ -51,17 +51,21 @@ fs.appendFile('doc3.txt','Welcome', (err) =>{
     if (err){
         console.log(err);
     }else {
-        console.log("New File Created!!")
+        console.log("New File Created!!");
     }
-})
+});
 
 
 
 /////////////////////////////// add new content in new line ////////////////////////////////////////
-fs.appendFile('doc3.txt','\nIJSE', (err) =>{
-    if (err){
-        console.log(err);
-    }else {
-        console.log("New File Created!!")
+if (fs.existsSync('doc3.txt')) {
+    fs.appendFile('doc3.txt', '\nIJSE', (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("New File Created!!");
+        }
+    });
+}else{
+    // code
     }
-})
