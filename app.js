@@ -28,6 +28,16 @@ fs.writeFile('doc.txt','Welcome to NodeJS', () =>{
 
 
 /////////////////////////////// create directory ////////////////////////////////////////
-fs.mkdir('./doc',(err =>{
+/*
+fs.mkdir('./doc1',(err =>{
     console.log("Created!!");
 }))
+*/
+
+
+/////////////////////////////// remove directory ////////////////////////////////////////
+fs.rmSync('./doc1',{recursive: true,force: true},() =>{
+    console.log("Removed!!")
+});
+
+
